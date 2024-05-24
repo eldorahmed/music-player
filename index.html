@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="player-container" id="player-container">
+      <div class="volume-wrapper">
+        <input
+          type="range"
+          class="volume"
+          id="volume"
+          step="1"
+          min="0"
+          max="100"
+        />
+        <span class="volume-icon"><i class="fa-solid fa-volume-low"></i></span>
+        <span id="volume-range"></span>
+      </div>
+      <div class="cover-wrapper">
+        <img
+          src="./images/Alice Merton - NoRoots.jpeg"
+          alt="Album Cover"
+          class="cover"
+          id="cover"
+          width="300"
+          height="300"
+        />
+      </div>
+      <h3 id="author">Alice Merton</h3>
+      <h2 id="title">sugar</h2>
+      <audio src="./audios/Alice Merton - NoRoots.mp3" id="audio"></audio>
+      <div class="time-index">
+        <span id="start">0:00</span>
+        <span id="end">0:00</span>
+      </div>
+      <div class="progress-container">
+        <div class="progress"></div>
+      </div>
+
+      <div class="control-buttons">
+        <button class="prev" id="prev">
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+        <button class="plays" id="play">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button class="next" id="next">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+      </div>
+    </div>
+    <!--  -->
+    <script src="./music.js"></script>
+  </body>
+</html>
