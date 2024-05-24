@@ -111,7 +111,7 @@ const updateDuration = () => {
   setInterval(()=>{
       startTime.textContent = formatTime(audio.currentTime)
 
-  },1000);
+  });
 };
 
 // events
