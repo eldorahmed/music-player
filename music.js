@@ -134,3 +134,4 @@ volumeIcon.addEventListener("click", () => {
 });
 progressContainer.addEventListener("click", timeUpdate);
 audio.addEventListener("loadedmetadata", updateDuration);
+audio.addEventListener("ended", next);
