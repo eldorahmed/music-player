@@ -41,7 +41,7 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
   z-index: -1;
 }
 .cover {
@@ -150,7 +150,7 @@ button {
   }
 }
 #volume::-webkit-slider-thumb {
- appearance: none;
+  appearance: none;
   width: 20px;
   height: 20px;
   background: rgb(141, 238, 170);
@@ -165,7 +165,7 @@ button {
   width: 200px;
   height: 5px;
   background-color: #979797;
-  accent-color: rgb(141, 238, 170);
+  color: rgb(141, 238, 170);
   cursor: pointer;
   border-radius: 10%;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);

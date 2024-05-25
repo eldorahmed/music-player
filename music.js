@@ -32,7 +32,9 @@ const songPlaying = (song) => {
   let authorAndTitle = song.split("-");
   author.textContent = authorAndTitle[0].replaceAll("_", " ");
   title.textContent = authorAndTitle[1].replaceAll("_", " ");
-  playerContainer.style.background = `linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url(./images/${song}.jpeg) `;
+  playerContainer.style.background = `linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url(./images/${song}.jpeg) `;
+  playerContainer.style.backgroundRepeat = "no-repeat";
+  playerContainer.style.backgroundSize = "cover";
 };
 
 const playMusic = () => {
