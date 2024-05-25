@@ -18,11 +18,11 @@ const nextBtn = document.getElementById("next");
 audio.volume = 0.5;
 volumeRange.textContent = "50";
 const songs = [
-  "The Weeknd - Blinding Lights",
-  "Alice Merton - NoRoots",
-  "Ava Max - Salt",
-  "Dharia - Sugar & Brownies",
-  "The Chainsmokers feat. Halsey - Closer",
+  "The_Weeknd-Blinding_Lights",
+  "Alice_Merton-NoRoots",
+  "Ava_Max-Salt",
+  "Dharia-Sugar&Brownies",
+  "The_Chainsmokers_feat.Halsey-Closer",
 ];
 
 let curSong = 0;
@@ -30,8 +30,9 @@ const songPlaying = (song) => {
   cover.src = `./images/${song}.jpeg`;
   audio.src = `./audios/${song}.mp3`;
   let authorAndTitle = song.split("-");
-  author.textContent = authorAndTitle[0];
-  title.textContent = authorAndTitle[1];
+  author.textContent = authorAndTitle[0].replaceAll("_", " ");
+  title.textContent = authorAndTitle[1].replaceAll("_", " ");
+  playerContainer.style.background = `linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url(./images/${song}.jpeg) `;
 };
 
 const playMusic = () => {
@@ -108,9 +109,8 @@ const formatTime = (time) => {
 
 const updateDuration = () => {
   endTime.textContent = formatTime(audio.duration);
-  setInterval(()=>{
-      startTime.textContent = formatTime(audio.currentTime)
-
+  setInterval(() => {
+    startTime.textContent = formatTime(audio.currentTime);
   });
 };
 
@@ -124,11 +124,11 @@ volumeIcon.addEventListener("click", () => {
   volume.style.visibility = "visible";
   setTimeout(() => {
     volume.style.visibility = "hidden";
-  }, 5000);
+  }, 15000);
   volumeRange.style.visibility = "visible";
   setTimeout(() => {
     volumeRange.style.visibility = "hidden";
-  }, 5000);
+  }, 15000);
 });
 progressContainer.addEventListener("click", timeUpdate);
 audio.addEventListener("loadedmetadata", updateDuration);
